@@ -1,19 +1,35 @@
 var nombre = 'Heriberto', edad = 27;
 
-function imprimirEdad(n, e) {
+/* function imprimirEdad(n, e) {
     console.log(`${n} tiene ${e} años`)
 }
 
 imprimirEdad(nombre, edad);
 imprimirEdad('Vicky', 27);
 imprimirEdad('Erick', 33);
-imprimirEdad('Carlos', 22);
+imprimirEdad('Carlos', 22); */
 
-//Toda variable que no se defina dentro de una función
-//estará definida dentro del alcance global
-function imprimirNombreEnMayusculas(nombre) {
-    nombre = nombre.toUpperCase();
-    console.log(nombre);
+var jesus = {
+    nombre: 'Jesus',
+    apellido: 'Reyes',
+    edad: 37
+}
+var dario = {
+    nombre: 'Dario',
+    apellido: 'Susnisky',
+    edad: 27
 }
 
-imprimirNombreEnMayusculas(nombre);
+function imprimirNombreEnMayusculas(persona) {
+    var {nombre} = persona;
+    console.log(nombre.toUpperCase());
+}
+
+function imprimirNombreYEdad(persona) {
+    var {nombre, edad} = persona;
+    console.log(`Hola, me llamo ${nombre} y tengo ${edad} años`)
+}
+
+
+imprimirNombreYEdad(jesus);
+imprimirNombreYEdad(dario);
