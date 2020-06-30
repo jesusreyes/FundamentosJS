@@ -30,6 +30,16 @@ function imprimirNombreYEdad(persona) {
     console.log(`Hola, me llamo ${nombre} y tengo ${edad} años`)
 }
 
+function cumpleaños(persona) {
+    return {
+        ...persona,
+        edad: persona.edad + 1
+    }
+}
+console.log(jesus);
+cumpleaños(jesus);
+console.log(jesus);
 
-imprimirNombreYEdad(jesus);
-imprimirNombreYEdad(dario);
+
+/* imprimirNombreYEdad(jesus);
+imprimirNombreYEdad(dario); */
