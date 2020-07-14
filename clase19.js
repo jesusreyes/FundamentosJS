@@ -34,13 +34,23 @@ var paula = {
     altura: 1.76
 }
 
-const esAlta = ({altura}) => altura >= 1.80;
-
 var personas = [sacha, alan, martin, dario, vicky, paula];
+const esAlta = ({altura}) => altura >= 1.80;
+const esBaja = ({altura}) => altura < 1.80
 
 var personasAltas = personas.filter(esAlta);
-var personasAltas = personas.filter(function(persona){
+var personasBajas = personas.filter(esBaja)
+/* var personasAltas = personas.filter(function(persona){
     return persona.altura >= 1.80;
+}); */
+
+/* console.table(personasAltas);
+console.table(personasBajas); */
+const pasarAlturaACms = persona => ({
+    ...persona,
+    altura: persona.altura *= 100
 });
 
-console.table(personasAltas);
+var personasCms = personas.map(pasarAlturaACms);
+
+console.table(personasCms)
